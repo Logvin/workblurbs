@@ -1,11 +1,7 @@
-api.call("Get", {
-    "typeName": "WorkHoliday",
-    "resultsLimit": 2
-}, function(result) {
-    console.log("Done: ", result[1]["holidayGroup"]);
-}, function(e) {
-    console.error("Failed:", e);
-});
+//Use this code below with the Geotab API Runner: https://developers.geotab.com/myGeotab/runner
+//Create one holiday manually first in the Geotab portal: https://my.geotab.com/DATABASE_NAME_HERE/#workHolidays
+//When run, it will give an output that says "r is not a functionTypeError: r is not a function", however it will work. Refresh the Geotab page for them to appear.
+//NOTE: The API is limited to 100 calls / minute. Make sure you are doing less than 100 holidays at once or it will skip some, and not tell you which ones it skipped.
 
 const myHolidayGroup=[{"groupId":"1"}];
 
@@ -102,14 +98,4 @@ api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2033-10-10T00:00:00
 api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2033-11-11T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Veterans Day"}});
 api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2033-11-24T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Thanksgiving Day"}});
 api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2033-12-25T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Christmas Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-01-02T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"New Year’s Day (observed)"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-01-16T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Martin Luther King Jr. Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-02-20T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Washington’s Birthday"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-05-29T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Memorial Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-06-19T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Juneteenth"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-07-04T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Independence Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-09-04T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Labor Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-10-09T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Columbus Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-11-10T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Veterans Day (observed)"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-11-23T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Thanksgiving Day"}});
-api.call("Add", {"typeName":"WorkHoliday", "entity":{"date":"2034-12-25T00:00:00.000Z", "holidayGroup":myHolidayGroup[0], "name":"Christmas Day"}});
+
